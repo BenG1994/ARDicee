@@ -48,7 +48,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             let results = sceneView.hitTest(touchLocation, types: .existingPlaneUsingExtent)
             
             if let hitResult = results.first {
-            
+                
                 addDice(atLocation: hitResult)
             }
         }
@@ -77,9 +77,9 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         let randomZ = Float(arc4random_uniform(4) + 1) * (Float.pi/2)
         
         dice.runAction(SCNAction.rotateBy(x: CGFloat(randomX * 5),
-                                              y: 0,
-                                              z: CGFloat(randomZ * 5),
-                                              duration: 0.5))
+                                          y: 0,
+                                          z: CGFloat(randomZ * 5),
+                                          duration: 0.5))
     }
     
     func rollAll() {
@@ -109,7 +109,6 @@ class ViewController: UIViewController, ARSCNViewDelegate {
                 dice.removeFromParentNode()
             }
         }
-        
     }
     
     //MARK: - ARSCNView Deegate Methods
@@ -117,12 +116,9 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
         guard let planeAnchor = anchor as? ARPlaneAnchor else {return}
         
-      let planeNode = createPlane(withPlaneAnchor: planeAnchor)
+        let planeNode = createPlane(withPlaneAnchor: planeAnchor)
         
         node.addChildNode(planeNode)
-        
-        
-        
     }
     
     //MARK: - Plane Rendering Methods
@@ -145,7 +141,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         planeNode.geometry = plane
         
         return planeNode
-    
+        
     }
 }
 
