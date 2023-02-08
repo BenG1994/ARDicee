@@ -4,7 +4,7 @@ ARDicee is an app that allows you to place AR dice on a flat plane from your rea
 
 ## Introduction
 
-Pixel City is from a tutorial by Angelu Yu with the focus on working with ARKit, augmented reality, and 3D spaces and planes in general.
+ARDicee is from a tutorial by Angelu Yu with the focus on working with ARKit, augmented reality, and 3D spaces and planes in general.
 
 ## Skills used
 
